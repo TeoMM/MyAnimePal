@@ -45,10 +45,13 @@ const Linker = MenuLink.withComponent(Link);
 const Nav = styled.div`
   padding: 0 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
   background: #3358b1;
+  @media (max-width: 768px) {
+    justify-content: space-between;
+  }
 `;
 
 const LogoTemplate = styled.a`
@@ -56,17 +59,18 @@ const LogoTemplate = styled.a`
   color: #959afa;
   text-decoration: none;
   font-weight: 800;
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   span {
-    font-weight: 400;
-    font-size: 1.3rem;
+    font-weight: 600;
+    font-size: 1.5rem;
   }
 `;
 const Logo = LogoTemplate.withComponent(Link);
 
 const Menu = styled.div<MenuProps>`
+  padding-left: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: wn;
   align-items: center;
   position: relative;
   @media (max-width: 768px) {
