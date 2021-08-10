@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 
+import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <Nav>
-      <Logo href="">
+      <Logo to="/">
         <span>My</span>Anime<span>Pal</span>
       </Logo>
       <Hamburger onClick={() => setIsOpen(!isOpen)}>
@@ -15,10 +16,9 @@ export default function Navbar() {
         <span />
       </Hamburger>
       <Menu isOpen={isOpen}>
-        <MenuLink href="">Our Work</MenuLink>
-        <MenuLink href="">About</MenuLink>
-        <MenuLink href="">Careers</MenuLink>
-        <MenuLink href="">Contact</MenuLink>
+        <Linker to="/toplist">Friend Toplist</Linker>
+        <Linker to="/search">Search Profile</Linker>
+        <Linker to="/profile">Your Profile</Linker>
       </Menu>
     </Nav>
   );
@@ -29,7 +29,7 @@ type MenuProps = {
 };
 
 const MenuLink = styled.a`
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -40,6 +40,7 @@ const MenuLink = styled.a`
     color: #7b7fda;
   }
 `;
+const Linker = MenuLink.withComponent(Link);
 
 const Nav = styled.div`
   padding: 0 2rem;
@@ -48,13 +49,9 @@ const Nav = styled.div`
   align-items: center;
   flex-wrap: wrap;
   background: #3358b1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
 `;
 
-const Logo = styled.a`
+const LogoTemplate = styled.a`
   padding: 1rem 0;
   color: #959afa;
   text-decoration: none;
@@ -65,6 +62,7 @@ const Logo = styled.a`
     font-size: 1.3rem;
   }
 `;
+const Logo = LogoTemplate.withComponent(Link);
 
 const Menu = styled.div<MenuProps>`
   display: flex;
