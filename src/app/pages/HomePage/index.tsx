@@ -6,20 +6,20 @@ import { Features } from './Features';
 import { PageWrapper } from 'app/components/PageWrapper';
 
 export function HomePage() {
-  return (
-    <>
-      <Helmet>
-        <title>Home Page</title>
-        <meta
-          name="description"
-          content="A React Boilerplate application homepage"
-        />
-      </Helmet>
-      <NavBar />
-      <PageWrapper>
-        <Masthead />
-        <Features />
-      </PageWrapper>
-    </>
-  );
+    return (
+        <>
+            <Helmet>
+                <title>Home Page</title>
+                <meta
+                    name="description"
+                    content="A React Boilerplate application homepage"
+                />
+            </Helmet>
+            <NavBar />
+            <PageWrapper>
+                <Masthead />
+                <Features />
+            </PageWrapper>
+        </>
+    );
 }

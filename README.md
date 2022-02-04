@@ -116,11 +116,11 @@ yarn cleanAndSetup
 
 But wait... there's more!
 
-- _The best test setup:_ Automatically guarantee code quality and non-breaking
-  changes. (Seen a react app with 100% test coverage before?)
-- _The fastest fonts:_ Say goodbye to vacant text.
-- _Stay fast_: Profile your app's performance from the comfort of your command
-  line!
+-   _The best test setup:_ Automatically guarantee code quality and non-breaking
+    changes. (Seen a react app with 100% test coverage before?)
+-   _The fastest fonts:_ Say goodbye to vacant text.
+-   _Stay fast_: Profile your app's performance from the comfort of your command
+    line!
 
 <sub><i>Keywords: Create React App, React Boilerplate, Custom Template, Typescript, React.js, Redux, Hot Reloading, ESNext, Babel, react-router, `styled-components`, redux-saga, FontFaceObserver</i></sub>
 

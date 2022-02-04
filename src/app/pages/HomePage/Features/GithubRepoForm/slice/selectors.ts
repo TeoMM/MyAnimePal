@@ -7,21 +7,21 @@ import { initialState } from '.';
 const selectDomain = (state: RootState) => state.githubRepoForm || initialState;
 
 export const selectUsername = createSelector(
-  [selectDomain],
-  githubRepoFormState => githubRepoFormState.username,
+    [selectDomain],
+    githubRepoFormState => githubRepoFormState.username,
 );
 
 export const selectLoading = createSelector(
-  [selectDomain],
-  githubRepoFormState => githubRepoFormState.loading,
+    [selectDomain],
+    githubRepoFormState => githubRepoFormState.loading,
 );
 
 export const selectError = createSelector(
-  [selectDomain],
-  githubRepoFormState => githubRepoFormState.error,
+    [selectDomain],
+    githubRepoFormState => githubRepoFormState.error,
 );
 
 export const selectRepos = createSelector(
-  [selectDomain],
-  githubRepoFormState => githubRepoFormState.repositories,
+    [selectDomain],
+    githubRepoFormState => githubRepoFormState.repositories,
 );

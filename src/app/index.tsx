@@ -17,22 +17,25 @@ import { NotFoundPage } from './pages/NotFoundPage/Loadable';
 import { useTranslation } from 'react-i18next';
 
 export function App() {
-  const { i18n } = useTranslation();
-  return (
-    <BrowserRouter>
-      <Helmet
-        titleTemplate="%s - React Boilerplate"
-        defaultTitle="React Boilerplate"
-        htmlAttributes={{ lang: i18n.language }}
-      >
-        <meta name="description" content="A React Boilerplate application" />
-      </Helmet>
+    const { i18n } = useTranslation();
+    return (
+        <BrowserRouter>
+            <Helmet
+                titleTemplate="%s - React Boilerplate"
+                defaultTitle="React Boilerplate"
+                htmlAttributes={{ lang: i18n.language }}
+            >
+                <meta
+                    name="description"
+                    content="A React Boilerplate application"
+                />
+            </Helmet>
 
-      <Routes>
-        <Route path={process.env.PUBLIC_URL + '/'} element={HomePage} />
-        <Route element={NotFoundPage} />
-      </Routes>
-      <GlobalStyle />
-    </BrowserRouter>
-  );
+            <Routes>
+                <Route path={process.env.PUBLIC_URL + '/'} element={HomePage} />
+                <Route element={NotFoundPage} />
+            </Routes>
+            <GlobalStyle />
+        </BrowserRouter>
+    );
 }

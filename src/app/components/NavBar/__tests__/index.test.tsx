@@ -5,9 +5,9 @@ import { NavBar } from '../index';
 const shallowRenderer = createRenderer();
 
 describe('<NavBar />', () => {
-  it('should match snapshot', () => {
-    shallowRenderer.render(<NavBar />);
-    const renderedOutput = shallowRenderer.getRenderOutput();
-    expect(renderedOutput).toMatchSnapshot();
-  });
+    it('should match snapshot', () => {
+        shallowRenderer.render(<NavBar />);
+        const renderedOutput = shallowRenderer.getRenderOutput();
+        expect(renderedOutput).toMatchSnapshot();
+    });
 });

@@ -30,7 +30,7 @@ export function {{ properCase componentName }}(props: Props) {
 
   return (
   {{#if wantStyledComponents}}
-  <Div>
+  <div>
   {{else}}
   <div>
   {{/if}}
@@ -39,7 +39,7 @@ export function {{ properCase componentName }}(props: Props) {
     {/*  {t(...messages.someThing())}  */}
     {{/if}}
   {{#if wantStyledComponents}}
-  </Div>
+  </div>
   {{else}}
   </div>
   {{/if}}
@@ -49,8 +49,4 @@ export function {{ properCase componentName }}(props: Props) {
 });
 {{else}}
 };
-{{/if}}
-
-{{#if wantStyledComponents}}
-const Div = styled.div``;
 {{/if}}
